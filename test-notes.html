@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       function toggleDiv(divId) {
+        var divToShow = document.getElementById(divId);
+    
+        if (divToShow) {
+            if (divToShow.style.display === 'none') {
+                divToShow.style.display = 'block';
+            } else {
+                divToShow.style.display = 'none';
+            };
+        }
+         else {
+        console.log('Div not found');
+        }}
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="test-notes.css">
+    <title>Test Notes</title>
+</head>
+<body>
+<div class="head" id="python">
+    <h1>Python</h1>
+    <div class="p">
+        It's a high-level programming language and case sensitive (differentiates between the upper and lower case characters).<br>
+        python accepts single ('), double(") and trible (''' or""") quotes to denote strong literals.
+    <br><br>
+    <button title="Click to show/hide content"
+    type="button" onclick="toggleDiv('div1')">Used in</button>
+        <div class="myDiv" id="div1">
+            <ul>
+                <li> AI
+                <li>Data Analytics
+                <li>Web development 
+                <li>Programming applications
+            </ul> 
+        </div>
+    </div>
+</div>
+<div class="head" id="variable">
+<h2>Variables</h2>
+    <div class="p">
+        A variable is a connection between a name in the code and some data memory.<br>
+        Variables store data values assigned useing an equal sign (=).
+    </div>
+</div>
+<div class="head" id="data-types">
+    <h3>Data types</h3>
+        <div class="p">
+        <ul>
+            <li><button title="Click to show/hide" onclick="toggleDiv('hover1')">Numeric: </button> <span class="myDiv" id="hover1"> int, float and complext</span>
+            <li><button title="Click to show/hide" onclick="toggleDiv('hover2')">Sequence</button> <span class="myDiv" id="hover2">List, tuple and range</span>
+            <li><button title="Click to show/hide" onclick="toggleDiv('hover3')">text:</button> <span class="myDiv" id="hover3">str</span>
+        </ul>
+        </div>
+</div>   
+<div class="head" id="comments">
+<h2>Comments</h2>
+    <div class="p">
+    comments can be used to explain the code and make it more readable and prevent execution when testing code
+    using (#) at the begenning.<br>
+    documentation is between three double quotes (""") if you want to type a whole paragragh.
+    </div>
+</div>
+<div class="head" id="operators">
+<h2>Operators</h2>
+    <div class="p">
+    Some operators can be used on strings.
+    <ul>
+        <li><button title="Click to show/hide" onclick="toggleDiv('hover4')">Comparison opertaors:</button> <span class="myDiv" id="hover4">(==,!=,&lt;,&gt;,&lt;=,>=)</span>
+        <li><button title="Click to show/hide" onclick="toggleDiv('hover5')">Arithmetic operators:</button><span class="myDiv" id="hover5">+,-,*,/,%,**.</span>
+        <li><button title="Click to show/hide" onclick="toggleDiv('hover6')">Logical operators:</button> <span class="myDiv" id="hover6">and, not, or.</span>
+        <li><button title="Click to show/hide" onclick="toggleDiv('hover7')">Assignment operators:</button> <span class="myDiv" id="hover7">=,+=,-=.</span>
+    </ul>
+    </div>
+</div>
+<div class="head" id="side-notes">
+<h2>Side notes</h2>
+    <div class="p">
+    <ul>
+        <li>Indentation: illustrates how the blocks are formetted and in what order should be excuted.</li>
+        <li>index start from 0.</li>
+        <li>x= [ 1, 2, 3, 4, 5, 6, 8, 9,] is equal to x= list(range(10)).</li>
+        <li>boolean data type represents two values True or False. The first letter in True and False must be capital.</li>
+        <li>expression is a combination of operator and operands.</li>
+        <li><h3>Why is it called a "turtle"?</h3></li>
+    </ul>
+        <div class="p">
+            The idea of "turtle graphics" was invented in the 1960s by computing educator Seymour Papert.<br>
+            Originally, the turtle was an actual physical robot, with a domed enclosure like a turtle's shell.<br>
+            The robot held a pen and could draw on a large sheet of paper.<br>
+            As computers became cheaper and graphics got better, the turtle robot was often replaced with an on-screen version like the one we're using in this course.<br>
+        </div>
+    <ul>
+        <li>lists can be nested like a big list with sub lists inside.</li>
+    </ul>
+    <button title="Click to show/hide content"
+    type="button" onclick="toggleDiv('div2')">List Functions</button>
+        <div  class="myDiv" id="div2">
+            <menu>
+                <li><button title="Click to show/hide" onclick="toggleDiv('hover8')">list.append():</button> <span class="myDiv" id="hover8"> puts an element in the list.</span>
+                <li><button title="Click to show/hide" onclick="toggleDiv('hover9')">len(list):</button> <span class="myDiv" id="hover9">gives us the number of elements inside the list (The length of the words or numbers in general).</span>
+                <li><button title="Click to show/hide" onclick="toggleDiv('hover10')">list.insert(no.,element):</button> <span class="myDiv" id="hover10">inserts the element with position.</span>
+                <li><button title="Click to show/hide" onclick="toggleDiv('hover11')">list.remove(element):</button> <span class="myDiv" id="hover11"> removes the selected element from the list.</span>
+            </menu>
+        </div>
+    </div>
+</div>
+<div class="head" id="loops">
+<h2>Loops</h2>
+    <div class="p">
+    loops excute a block of code repeatedly like <strong>For loops</strong> and <strong>While loops</strong>
+    </div>
+</div>
+<div class="head" id="for-loop">
+<h3>For loop</h3>
+    <div class="p">
+    The for has a variable after it that gets assigned to the elements in the range or list. <br>
+    range(start, stop, step). <br>
+    you have to input the start, stop and step are not necessary. <br>
+    you can input negative numbers. 
+    <br><br>
+        <button title="Click to show/hide" onclick="toggleDiv('div3')">For code block</button>
+        <div class="myDiv" id="div3">
+            for value in sequence:<br>
+            <mark>4 spaces</mark> {code block}<br>
+            else:<br>
+            <mark>4 spaces</mark> {code block} <br>
+            (else block is optional)
+        </div>
+    </div>
+</div>
+<div class="head" id="while-loop">
+<h3>While loop</h3>
+    <div class="p">
+    Repeats the code as long as the condition is true.<br><br>
+    <button title="Click to show/hide" onclick="toggleDiv('div4')">While code block</button>
+        <div class="myDiv" id="div4">
+            while condition :<br>
+            <mark>4 spaces</mark> {code block}<br>
+            else:<br>
+            <mark>4 spaces</mark> break
+        </div>
+    </div>
+</div>
+<div class="head" id="error">
+<h2>Errors</h2>
+    <div class="p">
+        The computer will give you the type of error and the line where the error is.
+    </div>
+</div>
+<div class="head" id="SynAndLog">
+<h3>syntax or logical error</h3>
+        <div class="p">
+            <ul>
+            <li>syntax:cuased by not following the proper structure of the language.</li>
+            </ul>
+                <button title="Click to show/hide" onclick="toggleDiv('hover12')">Examples:</button>
+                <div class="myDiv" id="hover12">
+                <ul>
+                    <li>Name error: when a variable isn't defined.
+                    <li>Zero Division Error: you divided something with zero.
+                    <li>Usage error: When you ask the computer to do something that doesn't make sense.
+                </ul>
+                </div>
+            <ul>
+            <li>logical: when the code runs without crashing but produces an incorrect result.</li>
+            </ul>
+        </div>
+</div>
+<div class="head" id="statements">
+    <h2>statements</h2>
+    <button title="Click to show/hide" onclick="toggleDiv('hover13')">Simple:</button>
+    <div class="myDiv" id="hover13">
+        assignment ( X=3 ) , import (import "package"), print or method call ( len(Name) )
+    </div><br>
+    <button title="Click to show/hide" onclick="toggleDiv('hover14')">Compound:</button>
+    <div class="myDiv" id="hover14">
+        loop ( for loop) or conditional (if condition)
+    </div>
+</div>
+<div class="head" id="If">
+    <h2>If condition</h2>
+    <div class="p">If condition is used to make decisions.</div>
+    <button title="Click to show/hide" onclick="toggleDiv('hover15')">If code block</button>
+    <div class="myDiv" id="hover15">
+        if a &gt; b:<br>
+        <mark>4 spaces</mark> print("b is greater than a") <br>
+        elif a &lt; b:<br>
+        <mark>4 spaces</mark> print("a is greater than b") <br>
+        else:<br>
+        <mark>4 spaces</mark> print("Invalid input") <br>
+    </div>
+</div>
+<div class="head" id="Functions">
+    <h2>Functions</h2>
+        <div class="p">
+            Function: A block of code than has a name but doesn't run until it's called.<br>
+            Function call: the statement that makes the function run.<br>
+            Argument: a value that we can pass to a function when we call that function.<br>
+            Method: A function thats associated with an object.<br>
+        </div>
+    <ul>
+    <li><h3>Built in Functions</h3></li>
+    </ul>
+        <div class="p">
+            Built in functions are functions that are already available and built in a programming language.<br>
+            "def" can be used in python to build your own function.<br>
+            <button title="Click to show/hide" onclick="toggleDiv('hover16')">def code block</button>
+            <div class="myDiv" id="hover16">
+              def shape(length, color, sides):<br>
+              <mark>4 spaces</mark> jack.color(color)<br>
+              <mark>4 spaces</mark> for side in range (sides):<br>
+              <mark><strong>8</strong> spaces</mark> jack.forward(length)<br>
+              <mark><strong>8</strong> spaces</mark> jack.right(360/sides)<br>
+              <mark>I f you don't know why we added 8spaces go back to <b>Indentation</b></mark><br>
+            </div>
+         </div>
+    
+</div>
+</body>
+</html>
