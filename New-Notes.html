@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics</title>
+    <style>
+        body {
+            background-color: rgb(15, 15, 15);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            
+            padding: 40px;
+        }
+
+        mark {
+            background: rgb(250, 166, 250); 
+            color: rgb(66, 0, 55);
+            padding: 2px 5px;
+            border-radius: 5px; 
+        }
+
+        h1, h2, h3 {
+            border-top: 2px solid transparent;
+            border-right: 2px solid transparent;
+            border-radius: 10px;
+            background:
+                linear-gradient(to right, rgb(26, 26, 26), rgb(15, 15, 15)),
+                linear-gradient(to right, rgb(15, 15, 15), rgb(92, 0, 128), #3c67e3, rgb(92, 0, 128));
+            background-clip: padding-box, border-box;
+            background-origin: padding-box, border-box;
+            padding: 15px;
+            width: fit-content;
+            color: #e3e3e3;
+            }
+
+        .myDiv {
+            border-top: 2px solid transparent;
+            border-right: 2px solid transparent;
+            border-radius: 10px;
+            background: 
+                linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0)), 
+                linear-gradient(to right, rgb(92, 0, 128), #3c67e3, rgb(92, 0, 128)); 
+            background-clip: padding-box, border-box;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-align: left;
+            color: rgb(255, 210, 255);
+            width: 80%;
+            margin: 40px 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            gap: 30px;
+        }
+        .myDiv:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgb(125, 184, 255);
+        }
+        .hiddenDiv {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.9);
+            transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+        }
+        .showDiv {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        button {
+            background: linear-gradient(90deg, purple, #3c67e3ed);
+            background-size: 300% 300%;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            animation: gradientMove 0.2s ease-in-out forwards;
+        }
+        button:not(:hover) {
+            transform: scale(1.05);
+            animation: gradientMoveR 0.2s ease-in-out forwards;
+        }
+
+        @keyframes gradientMoveR {
+            0%{background-position: 100% 50%;}
+            25%{background-position: 90% 50%;}
+            40%{background-position: 75% 50%;}
+            60%{background-position: 50% 50%;}
+            80%{background-position: 35% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        @keyframes gradientMove {  
+            0%{background-position: 0% 50%;}
+            25%{background-position: 35% 50%;}
+            40%{background-position: 50% 50%;}
+            60%{background-position: 75% 50%;}
+            80%{background-position: 90% 50%;}
+            100%{background-position: 100% 50%;}
+        }
+
+        .social-icons a {
+            color: rgb(165, 163, 255);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .social-icons a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="banner">
+        <h4>Mariam Gad</h4>
+    </div>
+    
+    <div class="social-icons">
+        <a href="https://github.com/Mariam2212" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    
+    <h1>Python Basics</h1>
+    <div class="myDiv">
+        <h2>Using Python</h2>
+        <button onclick="toggleDiv('pythonUse')">Learn More</button>
+        <div id="pythonUse" class="hiddenDiv">
+            <p>Python is a widely used high-level programming language known for its simplicity and readability.</p>
+        </div>
+    </div>
+    <div class="myDiv">
+        <h2>Variables</h2>
+        <button onclick="toggleDiv('variables')">Learn More</button>
+        <div id="variables" class="hiddenDiv">
+            <p>Variables store data values and are dynamically typed in Python.</p>
+        </div>
+    </div>
+    <div class="myDiv">
+        <h2>Data Types</h2>
+        <button onclick="toggleDiv('dataTypes')">Learn More</button>
+        <div id="dataTypes" class="hiddenDiv">
+            <p>Common data types include <mark>int</mark>, <mark>float</mark>, <mark>str</mark>, and <mark>bool</mark>.</p>
+        </div>
+    </div>
+    <div class="myDiv">
+        <h2>Operators</h2>
+        <button onclick="toggleDiv('operators')">Learn More</button>
+        <div id="operators" class="hiddenDiv">
+            <p>Operators like <mark>+</mark>, <mark>-</mark>, <mark>*</mark>, and <mark>/</mark> are used for arithmetic operations.</p>
+        </div>
+    </div>
+    <div class="myDiv">
+        <h2>Comments</h2>
+        <button onclick="toggleDiv('comments')">Learn More</button>
+        <div id="comments" class="hiddenDiv">
+            <p>Comments in Python start with <mark>#</mark> and are ignored during execution.</p>
+        </div>
+    </div>
+    <div class="myDiv">
+        <h2>Side Notes</h2>
+        <button onclick="toggleDiv('sideNotes')">Learn More</button>
+        <div id="sideNotes" class="hiddenDiv">
+            <p>Indentation is crucial in Python as it defines code blocks.</p>
+        </div>
+    </div>
+    <script>
+        function toggleDiv(divId) {
+            var div = document.getElementById(divId);
+            div.classList.toggle('showDiv');
+        }
+    </script>
+</body>
+</html>
